@@ -1,0 +1,36 @@
+.searchInput {
+    position: relative;
+}
+
+.searchInput .resultBox {
+    padding: 0;
+    opacity: 0;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.searchInput.active .resultBox {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.searchInput .resultBox ul {
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.searchInput .resultBox li {
+    
+    border-radius: 3px;
+    display: block;
+}
+
+.searchInput.active .resultBox ul {
+    display: block;
+}
+
+.searchInput .resultBox li:hover {
+    background: #efefef;
+}

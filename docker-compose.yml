@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: codeigniter-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+    volumes:
+      - mysql-data:/var/lib/mysql
+    secrets:
+      - mysql_root_password
+    networks:
+      - mynetwork
+
+  nginx:
+    image: nginx:latest
+    container_name: mynginx
+    ports:
+      - "80:80"
+    volumes:
+      - nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php-fpm
+      - mysql
+    networks:
+      - mynetwork
+
+  php-fpm:
+    build:
+      context: .
+      dockerfile: phpfpm/Dockerfile
+    container_name: myphpfpm
+    depends_on:
+      - mysql
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

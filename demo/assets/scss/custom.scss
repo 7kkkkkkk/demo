@@ -1,0 +1,206 @@
+// Import Bootstrap variables
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_variables-dark.scss";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../../node_modules/bootstrap/scss/_maps.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../node_modules/bootstrap/scss/_root.scss";
+
+// 6. Optionally include any other parts as needed
+@import "../../node_modules/bootstrap/scss/_card.scss";
+
+// 8. Add additional custom code here
+.card {
+    border: 1px solid #ffffff;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+}
+
+#map {
+    height: 400px; /* Set the height of the map container */
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #51247A;
+    --bs-btn-border-color: #51247A;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #371453;
+    --bs-btn-hover-border-color: #371453;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #371453;
+    --bs-btn-active-border-color: #371453;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #51247A;
+    --bs-btn-disabled-border-color: #51247A;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #51247A;
+    --bs-btn-border-color: #51247A;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #51247A;
+    --bs-btn-hover-border-color: #51247A;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #51247A;
+    --bs-btn-active-border-color: #51247A;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #51247A;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #51247A;
+    --bs-gradient: none;
+}
+
+a {
+    color: #51247A;
+    text-decoration: none;
+}
+
+a:hover {
+    --bs-link-color-rgb: #481f6d;
+    // text-decoration: underline;
+}
+
+.course-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.course-item:hover {
+    background-color: #f1f1f1;
+}
+
+.course-item.active{
+    background-color: #f1f1f1;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+}
+
+.searchInput {
+    position: relative;
+}
+
+.searchInput .resultBox {
+    padding: 0;
+    opacity: 0;
+    top: 55px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.searchInput.active .resultBox {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.searchInput .resultBox ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.searchInput .resultBox li {
+    border-radius: 3px;
+    display: block;
+}
+
+.searchInput.active .resultBox ul {
+    display: block;
+}
+
+.searchInput .resultBox li:hover {
+    background: #efefef;
+}
+
+#dropzone {
+    border: 2px dashed #ccc;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #555;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#dropzone.highlight {
+    border-color: purple;
+}
+
+#image-preview {
+    margin-top: 10px;
+}
+
+#image-preview img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#post-list {
+    height: 700px;
+    overflow-y: auto;
+}
+
+#email-verified {
+    --bs-btn-padding-y: 0.15rem;
+    --bs-btn-padding-x: 0.25rem;
+    --bs-btn-font-size: 0.8rem;
+    --bs-btn-border-radius: 5px;
+
+    --bs-btn-color: #51247A;
+    --bs-btn-border-color: #51247A;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #51247A;
+    --bs-btn-hover-border-color: #51247A;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #51247A;
+    --bs-btn-active-border-color: #51247A;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #51247A;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #51247A;
+    --bs-gradient: none;
+}
+
+  
+
+
