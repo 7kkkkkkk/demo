@@ -38,3 +38,11 @@ services:
 
 networks:
   mynetwork:
+    driver: overlay
+
+volumes:
+  mysql-data:
+
+secrets:
+  mysql_root_password:
+    external: true
